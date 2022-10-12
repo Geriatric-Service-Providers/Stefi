@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Client</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="images/log.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="health.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="medicine.html">SIGN IN</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="news.html">REGISTER</a>
+                  </li>
+               
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">CONTACT US</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!-- header section end -->
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <!DOCTYPE html>  
+                     <html>  
+                     <head>  
+                     <meta name="viewport" content="width=device-width, initial-scale=1">  
+                     <style>  
+                     body{  
+                       font-family: Calibri, Helvetica, sans-serif;  
+                       background-color: lightblue;  
+                       padding: 100px;  
+                     }  
+                     .container {  
+                         padding: 65px;  
+                       background-color: lightblue;  
+                     }  
+                       
+                     input[type=text], input[type=password], textarea {  
+                       width: 100%;  
+                       padding: 15px;  
+                       margin: 5px 0 22px 0;  
+                       display: inline-block;  
+                       border: none;  
+                       background: #f1f1f1;  
+                     }  
+                     input[type=text]:focus, input[type=password]:focus {  
+                       background-color: orange;  
+                       outline: none;  
+                     }  
+                      div {  
+                                 padding: 10px 0;  
+                              }  
+                     hr {  
+                       border: 1px solid #f1f1f1;  
+                       margin-bottom: 25px;  
+                     }  
+                     .registerbtn { 
+                       background-color: #4CAF50;  
+                       color: white;  
+                       padding: 16px 10px;  
+                       margin: 18px 0;  
+                       border: none;  
+                       cursor: pointer;  
+                       width: 10%; 
+                       float: right; 
+                       opacity: 0.9;  
+                     }  
+                     .registerbtn:hover {  
+                       opacity: 1;  
+                     }  
+                     </style> 
+                     <script>
+                             function validate(){
+                                var passwordd=document.getElementById('password').value ;
+                                var usernamee=document.getElementById('username').value;
+                                var phonee=document.getElementById('phn').value;
+                                if(usernamee=="")
+                                {
+                                    alert("Fill the Username");
+                                }
+                                else if(usernamee.length<8)
+                                {
+                                    alert("Enter username with more than 8 characters");
+                                }
+                                if(phonee=="")
+                                {
+                                    alert("Fill the Phone number");
+                                }
+                                else if(phonee.length<10)
+                                {
+                                    alert("Enter valid phone number");
+                                }
+                                if(passwordd=="")
+                                {
+                                    alert("fill password");
+                                }
+                                else if(passwordd.length<6)
+                                {
+                                    alert("enter a valid password");
+                                }
+                 
+                             }
+                      </script>
+                      </head>  
+                     <body>  
+                     <form>  
+                       <div class="container">  
+                         <h1>REGISTRATION FORM</h1> 
+                       <hr>  
+                    
+                     <input type="text" name="firstname" placeholder= "Username" id="username" size="50" required />   
+                     <!-- <label> Middlename: </label>   
+                     <input type="text" name="middlename" placeholder="Middlename" size="15" required />    -->
+                 <!--     <label> Lastname: </label>    
+                     <input type="text" name="lastname" placeholder="Lastname" size="15"required />    -->
+                     
+                    
+                     <select>  
+                     <option value="Services">Services</option>  
+                     <option value="Hospice Care at Home">Hospice Care at Home</option>  
+                     <option value="Hospice Interdisciplinary Care Team">Hospice Interdisciplinary Care Team </option>  
+                     <option value="Vitals Examination">Vitals Examination</option>  
+                     <option value="Wound Cleaning">Wound Cleaning</option>  
+                     <option value="Inpatient Hospice Care">Inpatient Hospice Care </option>  
+                     <option value="Emotional and Spiritual Care">Emotional and Spiritual Care</option>  
+                     </select>  
+                     </div>  
+                     <br>
+                     <br>
+                     <br>
+                     <!-- <div>  
+                     <label>   
+                     Gender :  
+                     </label><br>  
+                     <input type="radio" value="Male" name="gender" checked > Male   
+                     <input type="radio" value="Female" name="gender"> Female   
+                     <input type="radio" value="Other" name="gender"> Other  
+                       
+                     </div>   -->
+                   
+                           
+                     <select>  
+                     <option value="Number Of Members">Number Of Members</option>  
+                     <option value="1">1</option>  
+                     <option value="2">2</option>  
+                     <option value="3">3</option>  
+                     <option value="4">4</option>  
+                     <option value="5">5</option>  
+                     <option value="6">6</option> 
+                     <option value="7">7</option>  
+                     <option value="8">8</option> 
+                     </select>  
+                     </div>  
+                     <br><br>
+                   
+                       
+                     <input type="text" name="phone" placeholder="phone no." id="phn" size="10"/ required>   
+                     Qualification Of Members :  
+                     <textarea cols="80" rows="5" placeholder=" Enter the Qualification" value="Qualification" required>  
+                     </textarea> 
+                     Current Address :  
+                     <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+                     </textarea> 
+                      
+                               
+                         <select>  
+                         <option value="Availabile Time">Availabile Time</option>  
+                         <option value="5-6">5-6</option>  
+                         <option value="6-8">6-8</option>  
+                         <option value="6-6">6-6</option>  
+                         <option value="7-8">7-8</option>  
+                         <option value="8-8">8-8</option>  
+                         <option value="9-9">9-9</option> 
+                         <option value="10-4">10-4</option>  
+                         <option value="Full Time">Full Time</option> 
+                         </select>  
+                         </div> 
+                         <br>
+                         <br> 
+               
+                     <input type="text" placeholder="Enter Email" name="email" required>  
+                       
+                     
+                     <input type="password" placeholder="Enter Password" id="password" name="psw" required>  
+                       
+                 
+                     <input type="password" placeholder="Retype Password" id="password" name="psw-repeat" required>  
+                     <button type="submit" class="registerbtn">Register</button>    
+                     
+                     </form>  
+                     </body>  
+                     </html>  
+                     </div>
+                  </div>
+               </div>
+             
+                    
+              
+            <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+            </a>
+            <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+            </a>
+         </div>
+      </div>
+      <!-- client section end -->
+      <!-- footer section start -->
+      
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
