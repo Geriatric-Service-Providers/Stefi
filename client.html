@@ -2,36 +2,85 @@
  <html>
    <head>
       <style>  
-         body{  
-           font-family: Calibri, Helvetica, sans-serif;  
-           background-color: lightblue;  
-           padding: 100px;  
-         }  
-         .container {  
-             padding: 65px;  
-           background-color: lightblue;  
-         }  
-           
-         input[type=text], input[type=password], textarea {  
-           width: 100%;  
-           padding: 15px;  
-           margin: 5px 0 22px 0;  
-           display: inline-block;  
-           border: none;  
-           background: #f1f1f1;  
-         }  
-         input[type=text]:focus, input[type=password]:focus {  
-           background-color: orange;  
-           outline: none;  
-         }  
-          div {  
-                     padding: 10px 0;  
-                  }  
-         hr {  
-           border: 1px solid #f1f1f1;  
-           margin-bottom: 25px;  
-         }  
-         .addbtn{
+          
+        .container{
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            background-color: #ffff;
+            border-radius: 6px;
+            padding: 30px;
+            margin: 0 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container header{
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        .container header::before{
+            position: absolute;
+            content: "";
+            bottom: 2px;
+            height: 3px;
+            left: 0;
+            width: 27px;
+            background: radius 8px;
+        }
+        .container form{
+            position: relative;
+            min-height: 490px;
+            background-color: #f2f2f2;
+            margin-top: 16px;
+            
+        
+        }
+        .container form .details{
+            margin-top: 10px;
+        }
+        .container form .title{
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 6px 0;
+            color: rgb(3, 8, 2);
+        }
+        .container form .fields{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        form .fields .input-field{
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: column;
+        }
+        .input-field input{
+            height: 42px;
+        }
+        .input-field label{
+            font-size: 16px;
+            font-weight: 500;
+            color: #2e2e2e;
+        }
+        .input-field input{
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            padding: 0 15px;
+            height: 42px;
+            margin: 8px 0;
+        }
+        
+        .input-field input::is(:focus, :valid){
+            box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+        }
+        .addbtn{
             background-color: #4CAF50; 
             border-radius: 5px; 
       color: white;  
@@ -43,20 +92,21 @@
       float: left; 
       opacity: 0.9;   
     }
-         .registerbtn { 
-           background-color: #4CAF50;  
-           color: white;  
-           padding: 16px 10px;  
-           margin: 18px 0;  
-           border: none;  
-           cursor: pointer;  
-           width: 10%; 
-           float: right; 
-           opacity: 0.9;  
-         }  
-         .registerbtn:hover {  
-           opacity: 1;  
-         }  
+    .registerbtn {  
+      background-color: #4CAF50;
+      border-radius: 5px;  
+      color: white;  
+      padding: 12px 10px;  
+      margin: 18px 0;  
+      border: none;  
+      cursor: pointer;  
+      width: 10%; 
+      float: right; 
+      opacity: 0.9;  
+    }  
+    .registerbtn:hover {  
+      opacity: 1;  
+    }  
          </style> 
       <!-- basic -->
       <meta charset="utf-8">
@@ -103,7 +153,7 @@
                      <a class="nav-link" href="health.html">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="medicine.html">SIGN IN</a>
+                     <a class="nav-link" href="news.html">SIGN IN</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="client.php">REGISTER</a>
@@ -132,162 +182,149 @@
                      <meta name="viewport" content="width=device-width, initial-scale=1">  
                     
                      <script>
-                        var i=0;
-                          function fun()
-        {
-            var original = document.getElementById('member');
-            var clone = original.cloneNode(true); // "deep" clone
-            clone.id = "member" + ++i;
-            // or clone.id = ""; if the divs don't need an ID
-            original.parentNode.appendChild(clone);
-        }
-        function validate(){
-           var passwordd=document.getElementById('password').value ;
-           var organization_name=document.getElementById('org_name').value;
-           var fullname=document.getElementById('full_name').value;
-           var phonee=document.getElementById('phn').value;
-           if(organization_name=="")
-           {
-               alert("Fill the Organization name");
-           }
-           if(fullname=="")
-           {
-               alert("Fill the Organization name");
-           }
-           if(phonee=="")
-           {
-               alert("Fill the Phone number");
-           }
-           else if(phonee.length<10)
-           {
-               alert("Enter valid phone number");
-           }
-           if(passwordd=="")
-           {
-               alert("fill password");
-           }
-           else if(passwordd.length<6)
-           {
-               alert("enter a valid password");
-           }
-  
-        }
-                      </script>
-                      </head>  
-                      
-                     <body>  
-                     <form method="POST">  
-                       
-                        <div class="form first">
-                            <div class="Organizational"><br>
-                                <span class="title"><b>Organization Details</b></span>
-                                <div class="fields">
-                                    <div class="input-field">
-                                        <label>Organization Name</label>
-                                        <input type="text" id="orga_name" placeholder="Organization name" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Email</label>
-                                        <input type="text" id="emaail" placeholder="Email" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Phone Number</label>
-                                        <input type="text" id="phn" placeholder="Phone Number" required>
-                                    </div>
-            
-            
-                                    <!-- </div>   -->
-                                    <div class="input-field">
-                                        <label>   
-                                            Number Of Members  
-                                            </label>   
-                                            <input type="text" id="no_of_mem" placeholder="Number Of Members" required>    
-                                           
-                                            </div>  
+                        var i = 0;
+                        function fun()
+                        {
+                            var original = document.getElementById('member');
+                            var clone = original.cloneNode(true); // "deep" clone
+                            clone.id = "member" + ++i;
+                            // or clone.id = ""; if the divs don't need an ID
+                            original.parentNode.appendChild(clone);
+                        }
+                        function validate(){
+                           var passwordd=document.getElementById('password').value ;
+                           var organization_name=document.getElementById('org_name').value;
+                           var fullname=document.getElementById('full_name').value;
+                           var phonee=document.getElementById('phn').value;
+                           if(organization_name=="")
+                           {
+                               alert("Fill the Organization name");
+                           }
+                           if(fullname=="")
+                           {
+                               alert("Fill the Organization name");
+                           }
+                           if(phonee=="")
+                           {
+                               alert("Fill the Phone number");
+                           }
+                           else if(phonee.length<10)
+                           {
+                               alert("Enter valid phone number");
+                           }
+                           if(passwordd=="")
+                           {
+                               alert("fill password");
+                           }
+                           else if(passwordd.length<6)
+                           {
+                               alert("enter a valid password");
+                           }
+                  
+                        }
+                    </script> 
+                </head>
+                    <body>
+                        <div class="container">
+                            <header>Registration Form</header>
+                            <form action="#">
+                                <div class="form first">
+                                    <div class="Organizational"><br>
+                                        <span class="title"><b>Organization Details</b></span>
+                                        <div class="fields">
                                             <div class="input-field">
-                                                <label>Services</label>
-                                                <input type="text"  placeholder="Services" required>
+                                                <label>Organization Name</label>
+                                                <input type="text" id="orga_name" placeholder="Organization name" required>
                                             </div>
                                             <div class="input-field">
-                                                <label>Address</label>
-                                                <input type="text" placeholder="Address" required>
+                                                <label>Email</label>
+                                                <input type="text" id="emaail" placeholder="Email" required>
                                             </div>
                                             <div class="input-field">
-                                                <label>City</label>
-                                                <input type="text" placeholder="City" required>
+                                                <label>Phone Number</label>
+                                                <input type="text" id="phn" placeholder="Phone Number" required>
                                             </div>
+                                       
                                             <div class="input-field">
-                                                <label>District</label>
-                                                <input type="text" placeholder="District" required>
+                                                <label>   
+                                                    Number Of Members  
+                                                    </label>   
+                                                    <input type="text" id="no_of_mem" placeholder="Number Of Members" required>    
+                                                    
+                                                    </div>  
+                                                    <div class="input-field">
+                                                        <label>Services</label>
+                                                        <input type="text"  placeholder="Services" required>
+                                                    </div>
+                                                    <div class="input-field">
+                                                        <label>Address</label>
+                                                        <input type="text" placeholder="Address" required>
+                                                    </div>
+                                                    <div class="input-field">
+                                                        <label>City</label>
+                                                        <input type="text" placeholder="City" required>
+                                                    </div>
+                                                    <div class="input-field">
+                                                        <label>District</label>
+                                                        <input type="text" placeholder="District" required>
+                                                    </div>
+                                                    <div class="input-field">
+                                                        <label>Password</label>
+                                                        <input type="password" id="password" placeholder="Password Eg:Aabb@123" required>
+                                                    </div>
                                             </div>
-                                            <div class="input-field">
-                                                <label>Password</label>
-                                                <input type="password" id="password" placeholder="Password Eg:Aabb@123" required>
-                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <div class="member">
+                                        <div id="member">
+                                            <span class="title"><b>Members Details</b></span>
+                                            <div class="fields">
+                                                <div class="input-field">
+                                                    <label> Full Name</label>
+                                                    <input type="text" id="full_name" placeholder="Name" required>
+                                                </div>
+                                                <div class="input-field">
+                                                    <label>Email</label>
+                                                    <input type="text" id="email" placeholder="Email" required>
+                                                </div>
+                                                <div class="input-field">
+                                                    <label>Qualification</label>
+                                                    <input type="text" name="Qualification" placeholder="Qualification"id="qualification" size="10" required>
+                                                </div>
+                                                <div class="input-field">
+                                                    <label>Skills</label>
+                                                    <input type="text" name="Skills" placeholder="Skills" id="qualification" size="10" required>
+                                                </div>
+                                                <div class="input-field">
+                                                    <label>Available Time</label>
+                                                    <input type="text" placeholder="Available Time" required>
+                                                </div>
+                                               
+                                                    </label>
+                                                </div>
+                                                </div> -->
+                                                <div class="input-field">
+                                                    <label>Phone Number</label>
+                                                    <input type="text" id="phn" placeholder="Phone Number" required>
+                                                </div>
+                                                <div class="input-field">
+                                                    <label>Address</label>
+                                                    <input type="text" placeholder="Current Address" required>
+                                                </div>
+                                                
+                                        
+                                         
+                                
+                                        
+                                        <button type="submit" class="addbtn" onclick="fun()">ADD </button>
+                                        <button type="submit" class="registerbtn"  >REGISTER</button>
                                     </div>
                                 </div>
-                            </div><br>
-                            <div class="member">
-                                <div id="member">
-                                    <span class="title"><b>Members Details</b></span>
-                                    <div class="fields">
-                                        <div class="input-field">
-                                            <label> Full Name</label>
-                                            <input type="text" id="full_name" placeholder="Name" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Email</label>
-                                            <input type="text" id="email" placeholder="Email" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Qualification</label>
-                                            <input type="text" name="Qualification" placeholder="Qualification"id="qualification" size="10" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Skills</label>
-                                            <input type="text" name="Skills" placeholder="Skills" id="qualification" size="10" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Available Time</label>
-                                            <input type="text" placeholder="Available Time" required>
-                                        </div>
-                                        
-                            <!-- <div class="input-field"> -->
-                                <div>      
-                                    
-                                    <button type="submit" class="addbtn" onclick="fun()">ADD </button>
-                        
-                     <button type="submit" name="submit" class="registerbtn" onclick="validate()" >Register</button>    
-                     
-                     </form>  
-                  </div> 
-                     </div>
-                  </div>
-               </div>
-             
-                    
-              
-          
-         </div>
-      </div>
-      <!-- client section end -->
-      <!-- footer section start -->
-      
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      
-      <!-- copyright section end -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   </body>
-</html>
+                            </div>
+                                </div>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </body>
+                </html>
