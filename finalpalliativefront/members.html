@@ -42,6 +42,15 @@
                     padding: 25px;   
                     background-color: lightblue;  
                 }   
+                hr {
+        position: relative;
+        top: 200px solid #8c8b8b;
+        border-top: 10px;
+        height: 120px;
+        width: 50%;
+        background: black;
+        margin-bottom: 500px;
+    }
             </style>   
             
       <!-- basic -->
@@ -72,15 +81,6 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
-   <script>
-      function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-   </script>
    <body>
       <!-- header section start -->
       <div class="header_section">
@@ -92,24 +92,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                     <a class="nav-link" href="index.html">HOME</a>
+                     <a class="nav-link" href="serviceprovider.html">HOME</a>
                   </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="health.html">ABOUT</a>
-                  </li>
+                  
                  
-                  <li class="nav-item active">
-                     <a class="nav-link" href="news.html">SIGN IN</a>
+                  <li class="nav-item">
+                     <a class="nav-link" href="members.html">VIEW MEMBERS</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="client.html">REGISTER</a>
+                     <a class="nav-link" href="appoinment.html">VIEW APPOINMENTS</a>
                   </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="contact.html">CONTACT US</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
-                  </li>
+                  
                </ul>
             </div>
          </nav>
@@ -118,75 +111,69 @@
       <!-- news section start -->
       <div class="news_section layout_padding">
          <div class="container">
-                <h1> Login Form </h1>  
-                <form method="POST" ACTION="serviceprovider.html" onsubmit="return validateForm()" >
-                    <div class="container">   
-                        <label>Username : </label>   
-                        <input type="text" placeholder="Enter Username" name="username" required>  
-                        <label>Password : </label>   
-                        <input type="password" placeholder="Enter Password" name="password" required>  
-                        <button type="submit" name="log" style="height:50px; width:100px">Login</button>       
-                    </div>   
-                </form>     
-                
+            
+               <header>Members Details</header>
+               <form action="#">
+        
+                   <!-- <div class="member"> -->
+                       <!-- <div id="member"> -->
+                           <!-- <span class="title"><b>Members Details</b></span> -->
+                           <div class="fields">
+                               <div class="input-field">
+                                   <label> Full Name</label>
+                                   <input type="text" id="full_name">
+                               </div>
+                               
+                               <div class="input-field">
+                                   <label>Qualification</label>
+                                   <input type="text" name="Qualification" id="qualification" size="10">
+                               </div>
+                               
+                               <div class="input-field">
+                                   <label>Phone Number</label>
+                                   <input type="text" id="phn">
+                               </div>
+                              <br>
+                              <hr>
+
+                           </div>
+                       </div>  
+                   </div>
+               
+              
+         
+            
+            
+          
+               
+         
                 
 
                      </div>
                   </div>
-                 
-               </div></div>
-            </div>
+                  <div class="col-lg-4 col-sm-6">
+                     
+                  </div>
+               </div>
             
       </div>
       <!-- news section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
-        <div class="container">
-           <div class="row">
-              <div class="col-lg-3 col-sm-6">
-                 <div class="footer_logo"><a href="index.html"><img src="images/log.png"></a></div>
-                 <h1 class="adderss_text">Contact Us</h1>
-                 <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">KOLLAM</span></div>
-                 <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+7586656566</span></div>
-                 <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">palliative@gmail.com</span></div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                 <h1 class="adderss_text">Staffs</h1>
-                 <div class="hiphop_text_1">There many experienced staffs to take care of you</div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                 <h1 class="adderss_text">WELCOME</h1>
-                 <div class="Useful_text">HEALTH IS WEALTH</div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                 
-                 <div class="social_icon">
-                    <ul>
-                       <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                       <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                       <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                       <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                    </ul>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </div>
-     <!-- footer section end -->
-     <!-- copyright section start -->
-     
-     <!-- copyright section end -->
-     <!-- Javascript files-->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/popper.min.js"></script>
-     <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="js/jquery-3.0.0.min.js"></script>
-     <script src="js/plugin.js"></script>
-     <!-- sidebar -->
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-     <script src="js/custom.js"></script>
-     <!-- javascript --> 
-     <script src="js/owl.carousel.js"></script>
-     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-  </body>
+      
+      <!-- copyright section start -->
+      
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
 </html>
